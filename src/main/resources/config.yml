@@ -1,0 +1,6 @@
+notifiers:
+  -
+    type: "webhook"
+    url: "http://localhost:8080"
+    leaveFormat: "%s left!"
+    joinFormat: "%s joined!"

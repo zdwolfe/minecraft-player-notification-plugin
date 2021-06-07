@@ -4,25 +4,27 @@ A Minecraft Spigot/Bukkit server plugin that sends notifications when players jo
 Currently supported notifications:
 1. Discord
 
+# What problem does this solve?
+My family plays together on a minecraft server. This plugin helps us know when others are playing so we can join.
+
 # Local Development
 
 ### Testing a local build
-```
-mvn package
-``` 
+Requires Docker and Maven to be installed on your system.
 
+After making changes to the plugin, run the following chained build, copy, and server start command:
 ```
-docker run --rm -e EULA=true  -p 25565:25565 -v $(pwd)/target:/data/plugins cmunroe/spigot:1.16.4
+mvn package && mkdir -p localdev/data/plugins && cp -v target/minecraft-plugin-join-notification-1.0-SNAPSHOT.jar $(pwd)/localdev/data/plugins && docker run --rm -e EULA=true  -p 25565:25565 -v localdev/data:/data cmunroe/spigot:1.16.4
 ```
 
-and you should see the following in the server logs as it boots up 
+You should see the following in the server logs as it boots up:
 
 ```
 [03:36:19] [Server thread/INFO]: [PlayerNotificationPlugin] Enabling PlayerNotificationPlugin v1.0
 ```
 
 
-Then start the minecraft client and connect to ``127.0.0.1:25565``.
+Then start the minecraft client and connect to ``127.0.0.1:25565``
 
 
 # Configuration
@@ -49,3 +51,6 @@ notifiers:
 
 # Discord Webhook Setup
 Visit the [official Discord documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) on webhooks for instructions on how to create a webhook.
+
+As of this writing, you use Edit Channel > Integrations > Webhooks
+![](./docs/discord-webhook.png )

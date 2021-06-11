@@ -5,7 +5,9 @@ Currently supported notifications:
 1. Discord
 
 # What problem does this solve?
-My family plays together on a minecraft server. This plugin helps us know when others are playing so we can join.
+My family plays together on a minecraft server. This plugin helps us know when others are playing so we can join, like this:
+
+![](./docs/example.png)
 
 # Local Development
 

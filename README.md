@@ -1,6 +1,8 @@
 # minecraft-plugin-player-notification
 A Minecraft Spigot/Bukkit/Paper server plugin that sends notifications when players join/leave the server.
 
+Download and install this plugin from CurseForge [here](https://www.curseforge.com/minecraft/mc-mods/simple-discord-leave-join-notification).
+
 Currently supported notifications:
 1. Discord
 
